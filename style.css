@@ -116,10 +116,16 @@ section {
 
 .hero-buttons a {
   padding: 0.75rem 1.5rem;
-  border-radius: 6px;
+  border-radius: 50px;
   font-weight: 600;
+  border: 1px solid white;
 }
-
+.hero-buttons a:hover {
+  background-color: #57a2ff;
+}
+a:hover {
+  color: black;
+}
 .btn-primary {
   background-color: #007bff;
   color: white;
@@ -216,8 +222,12 @@ form {
 
 .form-group {
   margin-bottom: 1.5rem;
+  font-family: "Open Sans", sans-serif;
 }
-
+.form-group textarea,
+input {
+  font-family: "Open Sans", sans-serif;
+}
 input,
 textarea {
   width: 100%;

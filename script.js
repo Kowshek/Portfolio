@@ -58,8 +58,34 @@ if (contactForm) {
       return;
     }
 
-    alert("Thank you! Your message has been sent successfully.");
-    contactForm.reset();
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      subject: subject,
+      message: message,
+    };
+
+    emailjs.send("service_4233a3b", "template_6i36dlq", templateParams).then(
+      function () {
+        Swal.fire({
+          icon: "success",
+          title: "Message Sent",
+          text: "Your message has been mailed to me. Thank you :)",
+          confirmButtonColor: "#3085d6",
+        });
+
+        contactForm.reset();
+      },
+      function (error) {
+        Swal.fire({
+          icon: "error",
+          title: "Failed",
+          text: "There's been some error on our side. Please try again",
+          confirmButtonColor: "#3085d6",
+        });
+        console.error("EmailJS error:", error);
+      }
+    );
   });
 }
 
