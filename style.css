@@ -12,9 +12,20 @@ body {
   color: #1a1a1a;
   line-height: 1.6;
 }
-
+.typewriter {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #2b2b2b;
+  border-right: 2px solid #333;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.HomePageText {
+  font-family: "IBM Plex Sans", sans-serif;
+}
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -303,11 +314,51 @@ button[type="submit"]:hover {
   padding: 5px;
 }
 
-.Viewbtn{
+.Viewbtn {
   border: 1px solid #007bff;
   border-radius: 10px;
   padding: 7px 15px 7px 15px;
   font-size: 12px;
   background-color: #007bff;
   color: white;
+}
+
+.social-hover-wrap {
+  display: inline-block;
+  font-weight: 600;
+  margin: 10px 0px 0px 48px;
+}
+
+.social-icons-hidden {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.3s ease;
+}
+
+.social-hover-wrap:hover .social-icons-hidden {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.social-icons-hidden a {
+  font-size: 1.3rem;
+  color: #444;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons-hidden a:hover {
+  transform: scale(1.2);
+  color: #0a66c2; /* LinkedIn Blue or adapt per brand */
+}
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
 }

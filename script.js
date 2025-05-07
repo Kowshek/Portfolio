@@ -96,3 +96,32 @@ window.addEventListener("click", function (e) {
     closeModal();
   }
 });
+
+const titles = ["I'm Kowshek Iyyappan" , "or a Frontend Developer", " or UI Enthusiast", "or maybe React Developer", "Guess we'll find out!"];
+let index = 0;
+let charIndex = 0;
+let currentTitle = "";
+let isDeleting = false;
+const el = document.querySelector(".typewriter");
+
+function type() {
+  if (index >= titles.length) index = 0;
+  currentTitle = titles[index];
+
+  if (isDeleting) {
+    el.textContent = currentTitle.substring(0, charIndex--);
+    if (charIndex < 0) {
+      isDeleting = false;
+      index++;
+    }
+  } else {
+    el.textContent = currentTitle.substring(0, charIndex++);
+    if (charIndex > currentTitle.length) {
+      isDeleting = true;
+      setTimeout(type, 1000);
+      return;
+    }
+  }
+  setTimeout(type, isDeleting ? 50 : 100);
+}
+type();
