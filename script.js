@@ -145,3 +145,26 @@ function type() {
   setTimeout(type, isDeleting ? 50 : 100);
 }
 type(); // Start the typewriter effect
+
+
+
+const sections = document.querySelectorAll("section");
+const navLink_pc = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLink_pc.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href").includes(current)) {
+      link.classList.add("active");
+    }
+  });
+});

@@ -11,70 +11,260 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <header>
+    <header class="sticky-header">
       <nav class="navbar">
         <div class="logo">My Portfolio</div>
-        <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
+
+        <div class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <section class="hero">
+    <section id="home" class="section">
       <div class="hero-content">
         <img
           src="rick-and-morty-minimalist-4k-wallpaper-uhdpaper.com-921@0@e.jpg"
           alt="Profile Picture"
           class="profile-pic"
         />
-        <h1 class="HomePageText">Hello, <span class="typewriter"></span></h1>
-        <p>Frontend Developer crafting beautiful and functional websites.</p>
-
-        <div class="hero-buttons">
-          <a href="KowshekIyyappan_Resume.pdf" target="_blank" class="btn"
-            >Download Resume</a
-          >
-        </div>
-        <div class="social-hover-wrap">
-          <a
-            href="#"
-            class="btn secondary social-hover-btn"
-            title="View My Socials"
-          >
-            Learn More
-          </a>
-
-          <div class="social-icons-hidden">
-            <a
-              href="https://linkedin.com/in/kowshek-iyyappan/"
-              target="_blank"
-              title="LinkedIn"
+        <div>
+          <h1 class="HomePageText">Hello, <span class="typewriter"></span></h1>
+          <p>Frontend Developer crafting beautiful and functional websites.</p>
+          <div class="hero-buttons">
+            <a href="Kowshek_Iyyappan_Resume.pdf" target="_blank" class="btn"
+              >Download Resume</a
             >
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://github.com/Kowshek" target="_blank" title="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="mailto:kowshekiyyappan@gmail.com" title="Email">
-              <i class="fas fa-envelope"></i>
-            </a>
+            <a href="#contact" class="btn secondary">Contact Me</a>
           </div>
         </div>
       </div>
     </section>
 
-    <footer class="fade-in">
+    <section id="about" class="section" class="fade-in">
+      <div class="container">
+        <h1>About Me</h1>
+        <p class="intro">
+          I'm a passionate Frontend Developer focused on creating stunning,
+          responsive and user-friendly websites. <br />I enjoy bringing ideas to
+          life in the browser.
+        </p>
+        <br />
+        <div class="about-item">
+          <h3>Personal Motto</h3>
+          <p>“Code is like humor. When you have to explain it, it’s bad.”</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-item">
+            <h2>Education</h2>
+            <p>B.Tech in Computer Science<br />Amrita Coimbatore , 2024</p>
+          </div>
+
+          <div class="about-item">
+            <h2>Work Experience</h2>
+            <p>
+              Frontend Developer Intern @
+              <a href="https://clsslabs.com/" target="_blank">CLSS LABS</a
+              ><br />6 months experience in a full-stack team (React, MySQL
+              .NET)
+            </p>
+          </div>
+
+          <div class="about-item">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+              <li>HTML5, CSS3, JavaScript</li>
+              <li>React.js, Angular basics</li>
+              <li>Responsive Design</li>
+              <li>Basic SQL</li>
+            </ul>
+          </div>
+
+          <div class="about-item">
+            <h2>Strengths</h2>
+            <ul class="strengths-list">
+              <li>Problem-solving mindset</li>
+              <li>Attention to detail</li>
+              <li>Team collaboration</li>
+              <li>Quick learner</li>
+            </ul>
+          </div>
+
+          <div class="about-item">
+            <h2>Hobbies</h2>
+            <ul class="hobbies-list">
+              <li>📸 Photography</li>
+              <li>📖 Books</li>
+              <li>🎥 Movies</li>
+            </ul>
+          </div>
+          <div class="about-item">
+            <h2>Languages</h2>
+            <ul class="languages-list">
+              <li>English – Fluent</li>
+              <li>Tamil – Native</li>
+              <li>Hindi – Basic understanding</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h1>My Projects</h1>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <!-- <img src="assets/project2.jpg" alt="Project 2" /> -->
+            <div class="project-content">
+              <h2>Blog Website</h2>
+              <p>
+                A responsive, animated portfolio (this one!) designed with HTML,
+                CSS, and JavaScript.
+              </p>
+              <!-- <button onclick="openModal('portfolio')">View Details</button> -->
+              <a
+                href="https://kowshek.github.io/Blog-Website/"
+                target="_blank"
+                class="Viewbtn"
+                >View Site</a
+              >
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+
+          <div class="project-card">
+            <!-- <img src="assets/project1.jpg" alt="Project 1" /> -->
+            <div class="project-content">
+              <h2>Gym Management System</h2>
+              <p>
+                Built a complete television scheduling system using React, .NET,
+                and MySQL for Sun Groups.
+              </p>
+              <!-- <button onclick="openModal('tv')">View Details</button> -->
+              <a href="" class="Viewbtn">View Site</a>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <!-- <img src="assets/project3.jpg" alt="Project 3" /> -->
+            <div class="project-content">
+              <h2>Sports Buddy</h2>
+              <p>
+                Developed a fantasy IPL team management app focusing on player
+                analysis and pitch conditions.
+              </p>
+              <!-- <button onclick="openModal('fantasy')">View Details</button> -->
+              <a href="" class="Viewbtn">View Site</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modals -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h1>Contact Me</h1>
+        <p>Feel free to send your messages,</p>
+        <p>they will be delivered directly to my inbox :)</p>
+        <form id="contact-form">
+          <div class="form-group">
+            <input type="text" id="name" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Your Email" required />
+          </div>
+          <div class="form-group">
+            <input type="text" id="subject" placeholder="Subject" required />
+          </div>
+          <div class="form-group">
+            <textarea
+              id="message"
+              rows="5"
+              placeholder="Your Message"
+              required
+            ></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
       <p>© <span id="year"></span> Kowshek Iyyappan. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "XpyWwmMPtt9Ie4xLv",
+        });
+      })();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+
+        // Close menu on outside click
+        document.addEventListener("click", (e) => {
+          if (
+            navLinks.classList.contains("active") &&
+            !navLinks.contains(e.target) &&
+            e.target !== hamburger
+          ) {
+            navLinks.classList.remove("active");
+          }
+        });
+
+        // Optional: Close menu when a link is clicked
+        const navItems = navLinks.querySelectorAll("a");
+        navItems.forEach((item) =>
+          item.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+          })
+        );
+      });
+    </script>
   </body>
 </html>
